@@ -22,7 +22,8 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
 #     t.string :adress, null:false, default: ""
 #      t.string :building_name, null:false, default: ""
 
-      t.integer :privileges, null:false, default: 2
+#privillegesで定義する
+#      t.integer :privileges, null:false, default: 2
       t.timestamps
     end
   end
