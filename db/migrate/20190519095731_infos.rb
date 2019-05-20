@@ -1,4 +1,7 @@
-class Infos < ActiveRecord::Migration[5.1]
+class CreateInfos < ActiveRecord::Migration[5.1]
   def change
+        create_table :infos do |t|
+      t. :user, foreign_key: true, null:false, default: ""
+    end
   end
 end
