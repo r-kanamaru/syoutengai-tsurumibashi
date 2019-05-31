@@ -2,19 +2,19 @@ class CreateShops < ActiveRecord::Migration[5.1]
   def change
     create_table :shops do |t|
       t.references :user, foreign_key: true, null:false, default: ""
-      t.text :copy,
-      t.string :name
-      t.string :name_kana
-      t.string :founded,
-      t.string :openning,
-      t.string :closed,
-      t.string :town_number,
-      t.string :tel_number,
-      t.string :fax_number,
-      t.string :email,
-      t.text :url,
-      t.text :map_api,
-      t.integer :switching_publiation,
+      t.text :copy, null:false, default: ""
+      t.string :name, null:false, default: ""
+      t.string :name_kana, null:false, default: ""
+      t.string :founded, null:false, default: ""
+      t.string :openning, null:false, default: ""
+      t.string :closed, null:false, default: ""
+      t.string :town_number, null:false, default: ""
+      t.string :tel_number, null:false, default: ""
+      t.string :fax_number, null:false, default: ""
+      t.string :email, null:false, default: ""
+      t.text :url, null:false, default: ""
+      t.text :map_api, null:false, default: ""
+      t.integer :switching_publiation, null:false, default: ""
     end
   end
 end
