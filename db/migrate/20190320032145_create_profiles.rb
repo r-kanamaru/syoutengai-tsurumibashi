@@ -12,8 +12,8 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
       t.string :gender, null:false, default: ""
       t.string :landline_number, null:false, default: ""
       t.string :mobile_phone_number, null:false, default: "",limit:11, unique: true
-      t.text :introduction, null:false, default: ""
-      t.text :avatar,null:false,default:""
+      t.text :introduction, null:false
+      t.text :avatar,null:false
       t.integer :switching_publication,null:false,defaoult:0
 
 #adressで定義する
