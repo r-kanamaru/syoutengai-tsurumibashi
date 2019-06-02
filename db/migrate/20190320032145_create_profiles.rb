@@ -1,7 +1,7 @@
 class CreateProfiles < ActiveRecord::Migration[5.1]
   def change
     create_table :profiles do |t|
-      t.references :user, foreign_key: true, null:false, default: ""
+      t.references :user, foreign_key: true, null:false
       t.string :first_name, null:false, default: ""
       t.string :last_name, null:false, default: ""
       t.string :first_name_kana, null:false, default: ""
@@ -14,7 +14,7 @@ class CreateProfiles < ActiveRecord::Migration[5.1]
       t.string :mobile_phone_number, null:false, default: "",limit:11, unique: true
       t.text :introduction, null:false, default: ""
       t.text :avatar,null:false,default:""
-      t.integer :switching_publication,null:false,defaoult:""
+      t.integer :switching_publication,null:false,defaoult:0
 
 #adressで定義する
 #      t.string :postal_code, null:false, default: "",limit: 7

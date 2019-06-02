@@ -11,7 +11,7 @@ class CreateGuides < ActiveRecord::Migration[5.1]
       t.string :location, null:false, default: ""
       t.string :access, null:false, default: ""
       t.text :map_api, null:false, default: ""
-      t.integer :switching_publication, null:false, default: ""
+      t.integer :switching_publication, null:false, default: 0
     end
   end
 end
