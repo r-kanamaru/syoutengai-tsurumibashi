@@ -5,31 +5,44 @@ def index
 end
 
 def new
-  @shops = Shop.new
+  @shop = Shop.new
 end
 
 def create
-  Shop.create(name: shops_params[:name],
-              name_kana: shops_params[:name_kana],
-              copy: shops_params[:copy],
-              founded: shops_params[:founded],
-              openning: shops_params[:openning],
-              closed: shops_params[:closed],
-              town_number: shops_params[:town_number],
-              tel_number: shops_params[:tel_number],
-              fax_number: shops_params[:fax_number],
-              email: shops_params[:email],
-              url: shops_params[:url],
-              map_api: shops_params[:map_api],
-              switching_publiation: shops_params[:switching_publiation],
-              user_id: current_user.id
-              )
-redirect_to root_path
+  @shop = Shop.new(shops_params)
+  if @shop.save
+    redirect_to root_path,notice: "ショップ登録完了"
+  else
+    render :new
+  end
 end
 
 def show
-  @shops = Shop.find(params[:id])
+  @shop = Shop.find(params[:id])
 end
+
+def edit
+  @shop = Shop.find(params[:id])
+end
+
+def update
+  shop = Shop.find(params[:id])
+  if shop.update(shops_params)
+    redirect_to shop_path,nitice: "更新完了"
+  else
+    render :edit
+  end
+end
+
+def destroy
+  shop = Shop.find(params[:id])
+  if shop.destroy
+    redirect_to root_path,notice: "削除完了"
+  else
+    render :show
+  end
+end
+
 
 private
 

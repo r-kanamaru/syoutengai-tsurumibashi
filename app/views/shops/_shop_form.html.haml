@@ -1,0 +1,56 @@
+= form_for(shop) do |f|
+
+  .field
+    = f.label "店名"
+    = f.text_field :name, autofocus: true
+
+  .field
+    = f.label "店名（カナ）"
+    = f.text_field :name_kana
+
+  .field
+    = f.label "キャッチコピー"
+    = f.text_field :copy
+
+  .field
+    = f.label "設立"
+    = f.text_field :founded
+
+  .field
+    = f.label "営業時間"
+    = f.text_field :openning
+
+  .field
+    = f.label "定休日"
+    = f.text_field :closed
+
+  .field
+    = f.label "番街（番号）"
+    = f.text_field :town_number
+
+  .field
+    = f.label "電話番号"
+    = f.text_field :tel_number
+
+  .field
+    = f.label "FAX番号"
+    = f.text_field :fax_number
+
+  .field
+    = f.label "E-mail"
+    = f.email_field :email
+
+  .field
+    = f.label "お店のHP（URL）"
+    = f.text_field :url
+
+  .field
+    = f.label "地図情報（API_key）"
+    = f.text_field :map_api
+
+  .field
+    = f.label "公開/非公開"
+    = f.text_field :switching_publiation
+
+  .actions
+    = f.submit "登録"

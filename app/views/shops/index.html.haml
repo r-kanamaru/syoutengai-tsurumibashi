@@ -7,18 +7,5 @@
 
 = link_to "ショップ登録", new_shop_path
 
-- @shops.each do|shop|
-  - if shop.switching_publiation == 1
-    .shop__info
-      .shop__info--name
-      店舗名：
-      = shop.name
-    .shop__info--name_kana
-      店舗名（カナ）：
-      = shop.name_kana
-    .shop__info--copy
-      コピー：
-      = shop.copy
-    .shop__show
-      = link_to '店舗詳細',"/shops/#{shop.id}",method: :get
+= render @shops
 
