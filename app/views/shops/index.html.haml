@@ -1,11 +1,7 @@
-%h1 商店街
+- content_for :title do
+  商店街TOP
 
-= link_to "サインアップ" , new_user_registration_path
-= link_to "ログイン" , new_user_session_path
-= link_to "ログアウト" , destroy_user_session_path, method: :delete
-= link_to "ユーザー編集" , edit_user_registration_path
-
-= link_to "ショップ登録", new_shop_path
+= render 'menu'
 
 = render @shops
 
