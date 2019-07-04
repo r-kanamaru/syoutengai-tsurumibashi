@@ -296,5 +296,5 @@ config.scoped_views = true
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-  config.secret_key = '**********************'
+  config.secret_key = 'f3f2cbc4e64a00d0469c1b67088f2d619194a30589dc574aaacf18972972d037d9c4a5c05039620a88a472dd1a9a5559a29ffc403b5eb02bb68d56d670548bae'
 end
