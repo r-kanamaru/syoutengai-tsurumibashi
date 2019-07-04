@@ -52,3 +52,4 @@ production:
   database: syoutengai-tsurumibashi_production
   username: syoutengai-tsurumibashi
   password: <%= ENV['SYOUTENGAI-TSURUMIBASHI_DATABASE_PASSWORD'] %>
+  socket: /tmp/mysql.sock

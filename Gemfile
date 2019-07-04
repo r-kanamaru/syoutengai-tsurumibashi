@@ -33,6 +33,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-instagram'
 gem "recaptcha"
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
