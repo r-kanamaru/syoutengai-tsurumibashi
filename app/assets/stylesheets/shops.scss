@@ -1,3 +1,30 @@
 // Place all the styles related to the Shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header_image{
+  width:100%;
+  height:300px;
+  background-image: url(test_image.jpeg);
+  background-size:cover;
+}
+.nav {
+    display: table;
+    width: 100%;
+    background: #FFF;
+     border-bottom:3px solid #ccc;
+}
+.nav__item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.nav__item + .nav__item {
+    border-left: 1px solid #CCC;
+}
+.nav__item a {
+    display: block;
+    padding: 15px 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}

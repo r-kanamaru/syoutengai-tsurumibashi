@@ -1,6 +1,15 @@
 %h1 商店街
-= link_to "サインアップ" , new_user_registration_path
-= link_to "ログイン" , new_user_session_path
-= link_to "ログアウト" , destroy_user_session_path, method: :delete
-= link_to "ユーザー編集" , edit_user_registration_path
-= link_to "ショップ登録", new_shop_path
+.header_image
+%ul.nav
+  %li.nav__item
+    = link_to "サインアップ" , new_user_registration_path
+  %li.nav__item
+    = link_to "ログイン" , new_user_session_path
+  %li.nav__item
+    = link_to "ログアウト" , destroy_user_session_path, method: :delete
+  %li.nav__item
+    = link_to "ユーザー編集" , edit_user_registration_path
+  %li.nav__item
+    = link_to "ショップ登録", new_shop_path
+
+
