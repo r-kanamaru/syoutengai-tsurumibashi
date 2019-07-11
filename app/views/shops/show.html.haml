@@ -1,44 +1,46 @@
-.shop__info
- .shop__info--name
- 店舗名：
- = @shop.name
- .shop__info--name_kana
- 店舗名（カナ）：
- = @shop.name_kana
- .shop__info--copy
- コピー：
- = @shop.copy
- .shop__info--founded
- 設立（年）：
- = @shop.founded
- .shop__info--oppening
- 営業時間：
- = @shop.openning
- .shop__info--closed
- 定休日：
- = @shop.closed
- .shop__info--town_number
- 番街：
- = @shop.town_number
- .shop__info--tel_number
- 電話番号：
- = @shop.tel_number
- .shop__info--fax_number
- ファックス番号：
- = @shop.fax_number
- .shop__info--email
- お問い合わせメール：
- = @shop.email
- .shop__info--url
- ホームページ：
- = @shop.url
- .shop__info--map_api
- 地図情報：
- = @shop.map_api
+.shop__show
+  .shop__show--image
+    = image_tag ("http://www.ticketport.co.jp/shop/IMG_%E6%A2%85%E7%94%B0.JPG"), class: "shop__show--image--image-box"
+  .shop__show--name
+    店舗名：
+    = @shop.name
+  .shop__show--name_kana
+    店舗名（カナ）：
+    = @shop.name_kana
+  .shop__show--copy
+    コピー：
+    = @shop.copy
+  .shop__show--founded
+    設立（年）：
+    = @shop.founded
+  .shop__show--oppening
+    営業時間：
+    = @shop.openning
+  .shop__show--closed
+    定休日：
+    = @shop.closed
+  .shop__show--town_number
+    番街：
+    = @shop.town_number
+  .shop__show--tel_number
+    電話番号：
+    = @shop.tel_number
+  .shop__show--fax_number
+    ファックス番号：
+    = @shop.fax_number
+  .shop__show--email
+    お問い合わせメール：
+    = @shop.email
+  .shop__show--url
+    ホームページ：
+    = @shop.url
+  .shop__show--map_api
+    地図情報：
+    = @shop.map_api
 
-.shop__info__edit
-= link_to "編集", edit_shop_path
-.shop__info__destroy
-= link_to "削除", shop_path, method: :delete
-.shop__info__back
-= link_to "戻る", root_path
+.shop__show__edit
+  = link_to "編集", edit_shop_path
+.shop__show__destroy
+  = link_to "削除", shop_path, method: :delete
+.shop__show__back
+  = link_to "戻る", root_path

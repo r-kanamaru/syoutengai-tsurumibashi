@@ -1,13 +1,16 @@
 - if shop.switching_publiation == 1
-  .shop__info
-    .shop__info--name
-    店舗名：
-    = shop.name
-  .shop__info--name_kana
-    店舗名（カナ）：
-    = shop.name_kana
-  .shop__info--copy
-    コピー：
-    = shop.copy
-  .shop__show
-    = link_to '店舗詳細',"/shops/#{shop.id}",method: :get
+  .shop_wrapper.float
+    .shop__info
+      .shop__info--image
+        = image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp_R7wn3zQmCuRTqdXBlsl9tUGCaeZn9po19O8dHF1QfnchdGXgA")
+      .shop__info--name
+        店舗名：
+        = shop.name
+      .shop__info--name_kana
+        店舗名（カナ）：
+        = shop.name_kana
+      .shop__info--copy
+        コピー：
+        = shop.copy
+      .shop__show
+        = link_to '店舗詳細',"/shops/#{shop.id}",method: :get
